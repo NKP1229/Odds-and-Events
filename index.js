@@ -1,5 +1,5 @@
 // TODO: this file! :)
-const NumberBank = [];
+let NumberBank = [];
 const Odds = [];
 const Evens = [];
 let numberBank, oddNumbers, evenNumbers;
@@ -35,6 +35,21 @@ function Sort1(){
 }
 function SortAll(){
     if(NumberBank.length > 0){
+        for(let i=0;i<NumberBank.length;i++){
+            const number = NumberBank[i];
+            if(number % 2 === 0){
+                Evens.push(number);
+                console.log("Evens: ", Evens);
+                evenNumbers.textContent = Evens;
+            }
+            else{
+                Odds.push(number);
+                console.log("Odds: ", Odds);
+                oddNumbers.textContent = Odds;
+            }
+        }
+        NumberBank = [];
+        numberBank.textContent = NumberBank;
         
     }
 }
